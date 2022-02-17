@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body text align = "center">
+    <h1>People Entered</h1>
+    <h2 id="count-el" >0</h2>
+    <button onclick="increase()">Increment</button>
+    <button onclick="save()" id="save-btn">SAVE</button>
+    <p id="save-el"> Previous entries: </p>
+
+    <script>
+
+        var countEl = document.getElementById("count-el")
+        var count = 0
+        // var welcomeEl = document.getElementById("welcome-el")
+        // var name = "David" 
+        // var greeting = "Good-morning"
+        var saveEl = document.getElementById("save-el")
+    
+        // welcomeEl.innerText =  greeting + " " + name
+
+
+        function increase() {
+            count += 1
+            // countEl.innerText = count 
+            countEl.textContent = count
+
+
+        }
+
+        function save() {
+            var innerSea = count + " - " 
+            // saveEl.innerText += innerSea
+            saveEl.textContent += innerSea  
+            countEl.textContent = 0
+            count = 0 
+        }
+            
+    </script>
+<!-- 
+    <script>
+        //document.getElementById("count-el").innerText = 5
+
+      let countEl = document.getElementById("count-el")
+
+      countEl = 0
+
+       function increase()
+      {
+          countEl = countEl - 1 
+
+
+          alert ("countEL")
+
+          
+
+
+
+      }
+    </script> -->
+</body>
+</html>
